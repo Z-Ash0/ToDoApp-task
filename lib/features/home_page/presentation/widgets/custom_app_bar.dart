@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_app/core/utils/app_colors.dart';
 import 'package:to_do_app/core/utils/app_strings.dart';
+import 'package:to_do_app/core/utils/app_text_styles.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({
-    super.key,
-  });
+  const CustomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +19,11 @@ class CustomAppBar extends StatelessWidget {
               children: [
                 Text(
                   AppStrings.myTask,
-                  style: TextStyle(fontSize: 32),
+                  style: AppTextStyles.purpleSize42,
                 ),
                 CircularProgressIndicator(
                   value: 1 / 3,
-                  backgroundColor: AppColors.colorGrey,
+                  backgroundColor: AppColors.primaryColorLight,
                   color: AppColors.primaryColor,
                 ),
               ],
@@ -33,10 +32,13 @@ class CustomAppBar extends StatelessWidget {
               children: [
                 Text(
                   '1 of 3 tasks',
-                  style: TextStyle(fontSize: 12, color: Colors.grey),
+                  style: TextStyle(
+                      fontSize: 12, color: AppColors.primaryColorLight),
                 ),
                 SizedBox(width: 10),
-                Expanded(child: Divider(height: 1)),
+                Expanded(
+                    child:
+                        Divider(height: 1, color: AppColors.primaryColorLight)),
               ],
             ),
           ],
