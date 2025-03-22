@@ -6,4 +6,7 @@ class AppTextStyles {
       TextStyle(fontSize: 12, color: AppColors.colorGrey);
   static const TextStyle purpleSize42 =
       TextStyle(fontSize: 42, color: AppColors.primaryColor);
+
+  static const TextStyle whiteSize18 =
+      TextStyle(color: AppColors.colorWhite, fontSize: 18);
 }
